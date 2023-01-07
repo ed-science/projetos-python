@@ -9,10 +9,7 @@ def pick_animal_type(animal):
     return animal["type"], 1
 
 def reducer(acc, val):
-    if val[0] not in acc.keys():
-        acc[val[0]] = 0 + val[1]
-    else:
-        acc[val[0]] = acc[val[0]] + val[1]
+    acc[val[0]] = 0 + val[1] if val[0] not in acc.keys() else acc[val[0]] + val[1]
     return acc
 
 

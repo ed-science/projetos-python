@@ -12,8 +12,8 @@ print("#################################")
 n_choices = 5
 win = False
 
-while n_choices > 0 and win is not True:
-    print("Dica: " + words[choice_c])
+while n_choices > 0 and not win:
+    print(f"Dica: {words[choice_c]}")
     answer_user = input("Data: DDMMAAAA\n")
     print("################## \n")
 
@@ -30,7 +30,7 @@ while n_choices > 0 and win is not True:
                 pontuation = pontuation + 1
             else:
                 check.append("💢")
-        
+
         print("Resposta: \n")
         print("|".join(check))
         print(" |".join(answer_user))
@@ -41,10 +41,10 @@ while n_choices > 0 and win is not True:
     else:
         print("Erro na entrada. A resposta deve ser uma data!")
         continue
-    n_choices = n_choices - 1
+    n_choices -= 1
 
-if win == True:
+if win:
     print("VITÓRIA!!!")
 else:
     print("DERROTA!")
-    print("A resposta era: " + choice_c)
+    print(f"A resposta era: {choice_c}")

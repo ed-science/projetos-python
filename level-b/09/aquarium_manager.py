@@ -7,9 +7,7 @@ data_aquarium = json.load(f)
 animals = data_aquarium["data"]
 
 def verify_fish(animal):
-    if animal["type"] == "fish":
-        return True
-    return False
+    return animal["type"] == "fish"
 
 animals_fish = list(filter(verify_fish, animals))
 

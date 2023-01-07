@@ -9,11 +9,8 @@ def is_palindrome(word):
         if i >= j:
             break
         j = j - 1
-    
-    if result == math.ceil(len(word)/2):
-        return True
-    else:
-        return False
+
+    return result == math.ceil(len(word)/2)
 
 def is_palindrome_recursive(word):
     if len(word) <= 1:

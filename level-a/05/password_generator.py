@@ -9,7 +9,7 @@ def password_generator(len_pass = 8):
 
     password_user = ""
 
-    for i in range(0, len_pass):
+    for _ in range(len_pass):
         digit = random.choice(options)
         password_user = password_user + digit
 

@@ -21,7 +21,7 @@ while True:
     else:
         print("Erro: valor informado não é numérico. Favor informe um número!")
         continue
-    
+
     n_choices = n_choices + 1
     if answer_user == random_number:
         print("Acertou!")
@@ -31,4 +31,4 @@ while True:
     else:
         print("Chutou baixo, o número randomico é maior que isso..")
 
-print("N° de tentativas: " + str(n_choices))
+print(f"N° de tentativas: {str(n_choices)}")

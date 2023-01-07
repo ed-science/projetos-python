@@ -24,7 +24,7 @@ class ConvertCurrency:
         endpoint = f"/api/v7/convert?q={initial_currency}_{end_currency}"
         parameters = ["&compact=ultra", f"&apiKey={self.api_key}"]
         url = self.url_base + endpoint +\
-            "".join([str(parameter) for parameter in parameters])
+                "".join([str(parameter) for parameter in parameters])
         data = get(url).json()
         if len(data) == 0:
             print("Moedas Inválidas")
@@ -35,5 +35,4 @@ class ConvertCurrency:
         except:
             print("Quantidade Inválida.")
             return
-        new_value = rate*amount
-        return new_value
+        return rate*amount
