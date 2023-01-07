@@ -41,9 +41,8 @@ class BuilderReqLinkedin(BuilderReq):
     return RequisicaoAPILinkedin()
   
   def setQueryParams(self, filters):
-    query_params = ""
-    for filter_, value in filters.items():
-      query_params += f"&{filter_}={value}"
+    query_params = "".join(
+        f"&{filter_}={value}" for filter_, value in filters.items())
     self.reqAPI.req["QueryParams"] = query_params
   
   def setDateRange(self, date_start, date_end):
@@ -67,9 +66,8 @@ class BuilderReqInstagram(BuilderReq):
     return RequisicaoAPIInstagram()
   
   def setQueryParams(self, filters):
-    query_params = ""
-    for filter_, value in filters.items():
-      query_params += f"&{filter_}={value}"
+    query_params = "".join(
+        f"&{filter_}={value}" for filter_, value in filters.items())
     self.reqAPI.req["QueryParams"] = query_params
   
   def setDateRange(self, date_start, date_end):

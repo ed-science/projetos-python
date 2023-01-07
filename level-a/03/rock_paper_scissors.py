@@ -20,20 +20,19 @@ while True:
     # 0 : R, 1 : T, 2 : P
     computer_option = options[computer_choice]
 
-    print("O computador escolheu " + computer_option)
+    print(f"O computador escolheu {computer_option}")
 
     if user_choice == computer_option:
         print("Empate!")
 
-    elif user_choice == "r" and computer_option == "t":
-        print("Você ganhou!")
-        user_points = user_points + 1
-
-    elif user_choice == "p" and computer_option == "r":
-        print("Você ganhou!")
-        user_points = user_points + 1
-
-    elif user_choice == "t" and computer_option == "p":
+    elif (
+        user_choice == "r"
+        and computer_option == "t"
+        or user_choice == "p"
+        and computer_option == "r"
+        or user_choice == "t"
+        and computer_option == "p"
+    ):
         print("Você ganhou!")
         user_points = user_points + 1
 
@@ -41,8 +40,8 @@ while True:
         print("Você perdeu!")
         computer_points = computer_points + 1
 
-print("Sua pontuação: " + str(user_points))
-print("Pontuação do Computador: " + str(computer_points))
+print(f"Sua pontuação: {str(user_points)}")
+print(f"Pontuação do Computador: {str(computer_points)}")
 
 if computer_points > user_points:
     print("Derrota!!!!")

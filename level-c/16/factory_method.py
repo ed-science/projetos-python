@@ -7,9 +7,7 @@ class Logistics:
   def planDelivery(self):
     transport = self.createTransport()
 
-    result = f"Logistics: Transporte sendo preparado...\n{transport.deliver()}"
-
-    return result
+    return f"Logistics: Transporte sendo preparado...\n{transport.deliver()}"
 
 class RoadLogistics(Logistics):
   def __init__(self, name):
@@ -36,9 +34,10 @@ class Truck(Transport):
     self.category = "truck" 
   
   def deliver(self):
-    result = (f"{self.category} preparado para entrega: {self.name}",
-              "Transporte térreo....")
-    return result
+    return (
+        f"{self.category} preparado para entrega: {self.name}",
+        "Transporte térreo....",
+    )
 
 class Ship(Transport):
   def __init__(self, name):
@@ -46,9 +45,10 @@ class Ship(Transport):
     self.category = "ship" 
   
   def deliver(self):
-    result = (f"{self.category} preparado para entrega: {self.name}",
-              "Transporte marítimo....")
-    return result
+    return (
+        f"{self.category} preparado para entrega: {self.name}",
+        "Transporte marítimo....",
+    )
 
 def client_code(logistics: Logistics):
   print(f"App: Carregado com {logistics.__class__.__name__}.",

@@ -12,7 +12,7 @@ answer_1 = input("Resposta: ")
 
 if answer_1 == "A":
     print("Correto!")
-    score = score + 1
+    score += 1
 else:
     print("Incorreto!")
 
@@ -21,7 +21,7 @@ answer_2 = input("Resposta: ")
 
 if answer_2 == "B":
     print("Correto!")
-    score = score + 1
+    score += 1
 else:
     print("Incorreto!")
 
